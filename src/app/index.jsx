@@ -1,45 +1,46 @@
-import { useState } from "react";
-import { FlatList, StyleSheet, Text, View } from "react-native";
-import { getAllJobs } from "../repository/jobRepository";
-import { Link } from "expo-router";
+import { useCallback, useEffect } from "react";
+import { StyleSheet, View } from "react-native";
+import { openDatabase } from "../services/dbService";
+import JobList from "../components/JobList";
 
 export default function Page() {
-  const [jobs, setJobs] = useState(getAllJobs());
+  // loading Database
+  // const loadDataCallback = useCallback(async () => {
+  //   try {
+  //     await openDatabase();
+  //   } catch (error) {
+  //     console.error("loadDataCallback err: ", error);
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   loadDataCallback();
+  // }, [loadDataCallback]);
+
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
-        {/* <Text style={styles.title}>Hello World</Text>
-        <Text style={styles.subtitle}>This is the first page of your app.</Text> */}
-        <FlatList
-          data={jobs}
-          contentContainerStyle={{ gap: 10 }}
-          renderItem={({ item }) => (
-            <Link href={`${item.slug}`}>{item.jobTitle}</Link>
-          )}
-        />
-      </View>
+    <View>
+      <JobList />
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    padding: 24,
-  },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
-  },
-  title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     alignItems: "center",
+//   },
+//   main: {
+//     flex: 1,
+//     justifyContent: "center",
+//     maxWidth: 960,
+//     marginHorizontal: "auto",
+//   },
+//   title: {
+//     fontSize: 64,
+//     fontWeight: "bold",
+//   },
+//   subtitle: {
+//     fontSize: 36,
+//     color: "#38434D",
+//   },
+// });
