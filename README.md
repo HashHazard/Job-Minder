@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-install?">How To Install?</a> •
+  <a href="#how-to-install">How To Install?</a> •
   <a href="#credits">Credits</a> •
   <a href="#license">License</a>
 </p>
