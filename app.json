@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "JobMinder",
-    "slug": "JobMinder",
+    "name": "Job Minder",
+    "slug": "creepergoboom",
     "scheme": "creeper-go-boom",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -19,6 +19,8 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.creepergoboom.jobminder",
+      "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -29,6 +31,14 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "a4af14c7-df17-4f13-ba01-01afbc12487c"
+      }
+    }
   }
 }
