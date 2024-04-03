@@ -6,7 +6,7 @@
   <br>
 </h1>
 
-<h4 align="center">Efficiently track job applications with our <a href="https://reactnative.dev/" target="_blank">React Native</a> powered Android app.</h4>
+<h4 align="center">Efficiently track job applications with my <a href="https://reactnative.dev/" target="_blank">React Native</a> powered Android app.</h4>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
